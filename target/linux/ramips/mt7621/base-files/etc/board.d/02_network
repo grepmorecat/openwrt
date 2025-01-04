@@ -288,6 +288,7 @@ ramips_setup_macs()
 		lan_mac=$(mtd_get_mac_ascii config mac)
 		wan_mac=$lan_mac
 		label_mac=$lan_mac
+		ucidef_set_network_device_mac eth0 $lan_mac
 		;;
 	linksys,e5600|\
 	linksys,ea6350-v4|\
