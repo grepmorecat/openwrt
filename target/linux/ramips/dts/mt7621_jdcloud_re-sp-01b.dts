@@ -64,6 +64,8 @@
 
 &sdhci {
 	status = "okay";
+	max-frequency = <52000000>;
+	vqmmc-supply = <&mmc_reg_3v3>;
 };
 
 &spi0 {
