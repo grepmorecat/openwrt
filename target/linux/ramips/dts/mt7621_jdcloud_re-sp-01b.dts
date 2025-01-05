@@ -64,6 +64,7 @@
 
 &sdhci {
 	status = "okay";
+	max-frequency = <24000000>;
 };
 
 &spi0 {
