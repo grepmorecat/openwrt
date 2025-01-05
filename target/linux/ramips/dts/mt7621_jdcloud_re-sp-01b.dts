@@ -102,7 +102,7 @@
 					#size-cells = <1>;
 
 					eeprom_factory_0: eeprom@0 {
-						reg = <0x0 0x400>;
+						reg = <0x0 0x4da8>;
 					};
 
 					eeprom_factory_8000: eeprom@8000 {
