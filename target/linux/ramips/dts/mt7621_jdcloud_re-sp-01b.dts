@@ -65,6 +65,7 @@
 &sdhci {
 	status = "okay";
 	non-removable;
+	mediatek,tuning-step = <64>;
 };
 
 &spi0 {
