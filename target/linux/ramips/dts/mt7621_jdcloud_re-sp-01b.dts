@@ -60,13 +60,46 @@
 			gpios = <&gpio 12 GPIO_ACTIVE_LOW>;
 		};
 	};
+
+	mmc_vcc_reg: regulator-mmc-vcc {
+		compatible = "regulator-fixed";
+
+		enable-active-high;
+
+		regulator-always-on;
+		regulator-max-microvolt = <3300000>;
+		regulator-min-microvolt = <3300000>;
+		regulator-name = "mmc_vcc";
+	};
+
+	mmc_vccq_reg: regulator-mmc-vccq {
+		compatible = "regulator-fixed";
+
+		enable-active-high;
+
+		regulator-always-on;
+		regulator-max-microvolt = <3300000>;
+		regulator-min-microvolt = <3300000>;
+		regulator-name = "mmc_vccq";
+	};
 };
+
+/delete-node/ &mmc_reg_3v3;
+/delete-node/ &mmc_reg_1v8;
 
 &sdhci {
 	status = "okay";
+
+	/delete-property/ cap-sd-highspeed;
 	non-removable;
+	no-sd;
+	no-sdio;
+
+	vmmc-supply = <&mmc_vcc_reg>;
+	vqmmc-supply = <&mmc_vccq_reg>;
+
 	mediatek,tuning-step = <64>;
-	max-frequency = <52000000>;
+	max-frequency = <50000000>;
 };
 
 &spi0 {
