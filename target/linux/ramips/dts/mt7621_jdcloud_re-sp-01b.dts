@@ -99,7 +99,7 @@
 	vqmmc-supply = <&mmc_vccq_reg>;
 
 	mediatek,tuning-step = <64>;
-	max-frequency = <50000000>;
+	max-frequency = <25000000>;
 };
 
 &spi0 {
