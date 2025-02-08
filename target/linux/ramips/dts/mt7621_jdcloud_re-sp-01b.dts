@@ -67,8 +67,8 @@
 		enable-active-high;
 
 		regulator-always-on;
-		regulator-max-microvolt = <3300000>;
-		regulator-min-microvolt = <3300000>;
+		regulator-max-microvolt = <3200000>;
+		regulator-min-microvolt = <3200000>;
 		regulator-name = "mmc_vcc";
 	};
 
@@ -78,8 +78,8 @@
 		enable-active-high;
 
 		regulator-always-on;
-		regulator-max-microvolt = <3300000>;
-		regulator-min-microvolt = <3300000>;
+		regulator-max-microvolt = <3200000>;
+		regulator-min-microvolt = <3200000>;
 		regulator-name = "mmc_vccq";
 	};
 };
@@ -94,6 +94,7 @@
 	non-removable;
 	no-sd;
 	no-sdio;
+	no-1-8-v;
 
 	vmmc-supply = <&mmc_vcc_reg>;
 	vqmmc-supply = <&mmc_vccq_reg>;
