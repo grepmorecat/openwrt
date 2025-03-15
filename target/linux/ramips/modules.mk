@@ -9,6 +9,7 @@ define KernelPackage/mmc-mtk
   TITLE:=MediaTek SD/MMC Card Interface support
   DEPENDS:=@(TARGET_ramips_mt7620||TARGET_ramips_mt76x8||TARGET_ramips_mt7621) +kmod-mmc
   KCONFIG:= \
+  CONFIG_MMC_TEST=y \
 	CONFIG_MMC \
 	CONFIG_MMC_MTK \
 	CONFIG_MMC_CQHCI
