@@ -57,6 +57,9 @@
 
 &sdhci {
 	status = "okay";
+	no-sd;
+	no-sdio;
+	non-removable;
 };
 
 &spi0 {
